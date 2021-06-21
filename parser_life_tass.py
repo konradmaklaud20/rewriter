@@ -10,13 +10,13 @@ pattern2 = r'ИТАР-ТАСС \w+\s+\w+/'
 date_dict = {"января": "01", "февраля": "02", "марта": "03", "апреля": "04", "мая": "05", "июня": "06",
              "июля": "07", "августа": "08", "сентября": "09", "октября": "10", "ноября": "11", "декабря": "12"}
 
-with open('paral_two_life_tass1.csv', 'a', encoding='utf8') as f:
+with open('paral_two_life_tass.csv', 'a', encoding='utf8') as f:
     writer = csv.DictWriter(f, fieldnames=["text1", "text2"])
     writer.writeheader()
 
 
 def write_csv(data):
-    with open('paral_two_life_tass1.csv', 'a', encoding='utf8') as f:
+    with open('paral_two_life_tass.csv', 'a', encoding='utf8') as f:
         writer = csv.DictWriter(f, fieldnames=["text1", "text2"])
         writer.writerow({'text1': data['text1'], 'text2': data['text2']})
         print(data)
