@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import difflib
 import datetime
 import json
 import csv
@@ -23,15 +22,8 @@ def write_csv(data):
         print(data)
         print('--------------------------------')
         print()
-
-
-def similarity(seq1, seq2):
-    normalized1 = seq1.lower()
-    normalized2 = seq2.lower()
-    matcher = difflib.SequenceMatcher(None, normalized1, normalized2)
-    return matcher.ratio()
-
-
+        
+        
 is_next = True
 link_life = "https://api.corr.life/public/sections/5e01383bf4352e43d960b258/posts?after=1620421324133"
 
